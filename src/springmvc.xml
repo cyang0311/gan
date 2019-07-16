@@ -24,7 +24,7 @@
     <!--MultipartResolver解析器-->
     <!--将上传的二进制文件流转为multifile-->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-        <property name="maxUploadSize" value="50" />
+        <property name="maxUploadSize" value="50000" />
         <property name="defaultEncoding" value="UTF-8" />
         <property name="resolveLazily" value="true" />
     </bean>
@@ -40,7 +40,7 @@
     <!--拦截器-->
     <mvc:interceptors>
         <mvc:interceptor>
-            <mvc:mapping path="/"/>
+            <mvc:mapping path="/*"/>
             <bean class="Interceptor.DemoInterceptor"></bean>
         </mvc:interceptor>
     </mvc:interceptors>
