@@ -10,5 +10,6 @@ public class DemoController {
     public String main(@PathVariable String page){
 
         return "WEB-INF/pages/"+page;
+//        return "redirect:/login.jsp";
     }
 }
